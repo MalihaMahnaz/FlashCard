@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,700&display=swap');
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+/*color: #00bcd4; 
+#2196f3 #aee6ff */
+
+
+.btn {
+    background-color: transparent;
+    border: none;
+    
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 8px;
+
+  }
+
+  .btn-small {
+    background-color: transparent;
+    border: none;
+    color: white;
+    padding: 10px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 0px;
+    cursor: pointer;
+    color: #fff;
+    border: 2px solid #969cbb;
+    border-radius: 8px;
+    
+
+  }
+
+  .btn:hover, .btn-small:hover{
+    background-color: #fff;
+    color: #352f5b;
+    font-weight: bold;
+  }
+
+  body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Space Mono', monospace;
+    background-color: #352f5b;
+    color: #fff;
+  }
+
+  .container{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  .title{
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .popup{
+    margin-top: 60px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    width: 550px;
+    height: 420px;
+    background: #423a6f;
+    position: relative;
+    display: none;
+  }
+
+  .popup.active{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    
+  }
+
+  textarea{
+    display: block;
+    margin: auto;
+  }
+
+  .close-btn{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: #969cbb;
+    
+    font-size: 20px;
+}
+  .close-btn:hover{
+    color: #fff;
+    
+  }
+
+  .yes-no-ques{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .yes-no{
+    display: flex;
+    justify-content: center;
+  }
+
+  .yes-btn{
+    margin: 20px;
+    width: 61px;
+  }
+
+  .no-btn{
+    margin: 20px;
+    width: 57px;
+  }
+
+  .flash-style{
+    margin-top: 40px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    width: 350px;
+    height: 200px;
+    background: #423a6f;
+    position: relative;
+    text-align: center;
+    
+    
+  }
+
+  .flashcard-list{
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    margin: 20px;
+    padding: 20px;
+    justify-content: center;
+  }
+
+  .form-inputs{
+    text-align: center;
+    margin-top: 50px;
+    
+  }
+
+  .form-inputs.active{
+    display: none;
+  }
+
+  
+
+  .submit{
+    margin: auto;
+    margin-top: 30px;
+  }
+
+  .labels{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    display:block;
+    text-align: left;
+    
+  }
+
+  .space{
+    margin-top: 40px;
+  }
+
+  .edit{
+    position: absolute;
+    bottom: 0px;
+    left: 10px;
+    padding-inline: 23.34px;
+  }
+
+  .delete{
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+  }
+
+  .details{
+    text-decoration: none;
+    margin-top: 10px;
+    color: #969cbb;
+    display: block;
+    margin-top: 30px;
+  }
+
+  .details:hover{
+    color: white;
+  }
+
+  .popques-style{
+    width: 380px;
+    height: 150px;
+    position: absolute;
+    z-index: 1000;
+  }
+
+  .required-field{
+    flex: 0 0 100%;
+    text-align: center;
+    top: 32px;
+    position: absolute;
+    font-style: italic;
+    display: none;
+  }
+
+  .required-field.active{
+    display: block;
+  }
+
+  .scene {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    
+     /* Remove this if you don't want the 3D effect */
+  }
+  
+  .card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+ 
+  }
+
+  .card__face {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    padding: 15px;
+    
+  }
+
+
+  .card__face--back {
+    color: #352f5b;
+    background: white;
+    transform: rotateY( 180deg );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+ 
+  .card.is-flipped {
+    transform: rotateY(180deg);
+  }

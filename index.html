@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcard</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css'>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">F l a s h c a r d</h1>
+        
+            <div class="btn btn-one" id="add-btn">
+                Add Questions
+            </div>
+        <div class="popup">
+            <a href='#' class='close-btn'>
+                <i class="fa-solid fa-rectangle-xmark"></i>
+                </a>
+                <div class="required-field">
+                    <p>Please fill up all the required fields</p>
+                </div>
+                
+                <form class='form-inputs' id="form"> 
+                <label class="labels">Question</label>
+                <textarea class='question' rows="4" cols="50" style="font-size:16px" onfocus="inputChange()"></textarea>
+                <label class="labels space">Answer</label>
+                <textarea class='answer' cols="50" rows="4" style="font-size:16px" onfocus="inputChange()"></textarea>
+                <input type='submit' value="Save" class="submit btn-small">
+                </form>
+            
+                
+        </div>
+        <div class="flashcard-list">
+
+        </div>
+    </div>
+    
+    <script src="index.js"></script>
+</body>
+</html>
